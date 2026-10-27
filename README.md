@@ -1,5 +1,7 @@
 # Koushik Biswas — Portfolio
 
+**Live website:** https://koushik-biswas-portfolio.vercel.app/
+
 A responsive navy-and-white professional portfolio based on the supplied CV, with light and dark modes, selected projects, experience, education, a printable web résumé, and an email contact form.
 
 ## Features
@@ -34,7 +36,9 @@ The build writes public files to `dist/`. Tooling and configuration are excluded
 
 ## Deploy on Vercel
 
-Import **Koushik-Biswas/Portfolio** in Vercel. The included `vercel.json` sets:
+The repository is linked to the Vercel project **koushik-biswas-portfolio** in the owner's account. Production is live at https://koushik-biswas-portfolio.vercel.app/.
+
+The included `vercel.json` sets:
 
 | Setting | Value |
 | --- | --- |
@@ -43,7 +47,7 @@ Import **Koushik-Biswas/Portfolio** in Vercel. The included `vercel.json` sets:
 | Output directory | dist |
 | Environment variables | None |
 
-Use your existing free Hobby plan when eligible. Link the GitHub repository to enable deployments from `main`. The website works at the domain Vercel assigns; it does not require a custom domain or paid backend. No production URL is claimed in this repository until deployment has been verified.
+The project uses the owner's existing Hobby account and deploys from `main` through the GitHub connection. No custom domain, paid backend, or environment variables are required.
 
 ## Deploy on GitHub Pages
 
@@ -76,4 +80,4 @@ The original uploaded CV PDF is not included in this repository. The web résum�
 
 ## Verification record
 
-The initial local implementation passed syntax/build checks, desktop light/dark visual checks, and mobile navigation and overflow checks at phone and tablet widths before the execution workspace became unavailable. Source was then recovered through the GitHub connector, with résumé links changed to the printable web page. The check workflow verifies the committed source and build. Final live deployment and real email delivery still require verification.
+GitHub Actions passed the source checks and static build. Phone and tablet layouts were checked for overflow, and the mobile menu and both themes were checked in the browser. Vercel reported the production deployment READY, and the public production URL returned HTTP 200 and displayed the portfolio without a sign-in prompt. Real email delivery has not been verified; the owner must activate FormSubmit after the first submission.
