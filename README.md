@@ -1,55 +1,79 @@
 # Koushik Biswas — Portfolio
 
-A responsive personal portfolio based on Koushik's CV, with dark and light themes, selected engineering projects, experience, education, résumé download, and an email contact form.
+A responsive navy-and-white professional portfolio based on the supplied CV, with light and dark modes, selected projects, experience, education, a printable web résumé, and an email contact form.
 
-## Stack
+## Features
 
-Semantic HTML, CSS, vanilla JavaScript, and a dependency-free Node.js build. No secrets or API keys are required in the browser. CSS project previews are illustrations, not screenshots of the live applications.
+- Responsive layouts for phones, tablets, and desktop.
+- Dark/light theme with a saved preference and system-theme support.
+- Accessible mobile navigation, keyboard focus, and reduced-motion support.
+- Signal Studio, Agentic RAG, GoCart, and Quick Chat project showcases.
+- Click-to-email Gmail address and click-to-call phone number.
+- A validated contact form with a honeypot, timeout, duplicate-submit protection, and visible error/success feedback.
+- A separate web résumé with Print / Save PDF support.
+- Dependency-free static build for Vercel or GitHub Pages.
 
-## Run locally
+The interface illustrations are CSS/SVG studies, not screenshots of the live projects. Personal claims and links are based on the supplied CV. The chat description does not claim independently verified end-to-end encryption.
 
-Requires Node.js 22 or later. There are no dependencies to install.
+## Local development
+
+Use Node.js 22 or newer. No dependencies need installing.
 
 ```sh
 npm run dev
 ```
 
-Open `http://localhost:3000`. To validate and create the deployment output:
+Open http://localhost:3000. Validate and build:
 
 ```sh
 npm run check
 npm run build
 ```
 
-The build writes public website files to `dist/` only. It excludes source tooling and deployment configuration.
+The build writes public files to `dist/`. Tooling and configuration are excluded.
 
-## Contact form: one-time activation
+## Deploy on Vercel
 
-The form submits to **koushikbiswas2423@gmail.com** through [FormSubmit](https://formsubmit.co/). A live submission triggers a confirmation email the first time the address is used for this form. **Open that email and click Activate Form** to enable delivery. Check Spam if it is missing. FormSubmit keeps pending submissions for 30 days according to its [help page](https://formsubmit.co/help).
+Import **Koushik-Biswas/Portfolio** in Vercel. The included `vercel.json` sets:
 
-The form includes required fields, email validation, a honeypot, duplicate-submit prevention, a timeout, and visible success/error feedback. Messages remain in the form if the network fails. The visitor's email is included as Reply-To. JavaScript-disabled browsers use a normal form POST, including the provider's verification flow. All messages depend on FormSubmit's availability and email activation. Do not add private keys to frontend code.
+| Setting | Value |
+| --- | --- |
+| Framework | Other |
+| Build command | npm run build |
+| Output directory | dist |
+| Environment variables | None |
 
-To test the real email path after deployment, submit a short message using an email address you control, activate the form in Gmail, and confirm the submission arrives. Browser UI tests with mocked responses do not prove email delivery.
+Use your existing free Hobby plan when eligible. Link the GitHub repository to enable deployments from `main`. The website works at the domain Vercel assigns; it does not require a custom domain or paid backend. No production URL is claimed in this repository until deployment has been verified.
 
-## GitHub Pages deployment
+## Deploy on GitHub Pages
 
-The optional `.github/workflows/pages.yml` workflow checks and builds the portfolio and publishes `dist/` when manually triggered from the Actions tab after Pages has been enabled. Vercel handles automatic deployments from `main` when the repository is linked.
+1. Open **Settings → Pages** in this repository.
+2. Select **GitHub Actions** as the publishing source.
+3. Open **Actions → Deploy portfolio to GitHub Pages → Run workflow**.
 
-**First-time account setup:** In this repository, open **Settings → Pages → Build and deployment → Source → GitHub Actions**. The GitHub connector can push source, but it does not expose the administration operation needed to enable Pages. After enabling Pages, rerun the deployment workflow if necessary. Once GitHub reports a successful deployment, the default project URL is `https://koushik-biswas.github.io/Portfolio/`.
+The optional Pages workflow builds `dist/` and deploys it. The separate check workflow validates source on pushes and pull requests. Relative asset paths support the `/Portfolio/` subdirectory.
 
-All local assets use relative paths to support this project subdirectory. No custom domain is required.
+The GitHub connector used to upload this code cannot enable Pages through its exposed tools; the one-time Pages setting must be enabled in GitHub before that deployment workflow can succeed.
 
-## Vercel deployment
+## Activate email delivery once
 
-Import `Koushik-Biswas/Portfolio` into your Vercel account and select the free Hobby plan when eligible. The included `vercel.json` sets the build command to `npm run build`, the framework to Other, and the output directory to `dist`. No environment variables are needed.
+Recipient: **koushikbiswas2423@gmail.com**.
 
-If Vercel becomes the primary host, update the URLs in `robots.txt`, `sitemap.xml`, and the `og:image` tag to the verified production domain. The site itself works at either host without changing asset URLs. The contact form does not depend on a Vercel function.
+The contact form uses [FormSubmit](https://formsubmit.co/). Submit one message from the live website, open the confirmation email in Gmail, and click **Activate Form**. Check Spam if it is missing. FormSubmit retains pending submissions for 30 days according to its [help page](https://formsubmit.co/help).
 
-## Edit content
+The visitor's email is included as Reply-To. The form keeps the visitor's text when the network fails. Without JavaScript, a normal POST opens FormSubmit's submission and verification flow. Delivery depends on the provider's availability and activation. No inbox delivery has been independently confirmed.
 
-- `index.html`: biography, project links, experience, skills, contact details, metadata, and form recipient.
-- `styles.css`: navy/white themes, responsive layouts, CSS interface illustrations, and reduced-motion support.
-- `app.js`: theme preference, mobile navigation, current section, and contact form behavior.
-- `assets/Koushik-Biswas-Resume.pdf`: supplied résumé.
+## Content editing
 
-The supplied CV is the source for personal claims. Project descriptions avoid implying unverified encryption or production scale. Live demo links are those embedded in the CV and can depend on the original applications' availability.
+- `index.html`: biography, projects, experience, skills, contact details.
+- `styles.css`: themes, responsive layouts, and interface illustrations.
+- `app.js`: theme controls, navigation, and contact form.
+- `resume.html`: CV-derived printable web résumé.
+- `resume.js`: print action.
+- `assets/favicon.svg`: monogram.
+
+The original uploaded CV PDF is not included in this repository. The web résumé contains the CV information and can be printed or saved as PDF by the visitor.
+
+## Verification record
+
+The initial local implementation passed syntax/build checks, desktop light/dark visual checks, and mobile navigation and overflow checks at phone and tablet widths before the execution workspace became unavailable. Source was then recovered through the GitHub connector, with résumé links changed to the printable web page. The check workflow verifies the committed source and build. Final live deployment and real email delivery still require verification.
