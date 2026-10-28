@@ -26,3 +26,7 @@ body{font-size:16px;line-height:1.8}.container{width:min(1240px,calc(100% - 96px
 /* Keep important labels readable at every width. */
 .brand-wordmark strong{font-size:13px}.hero .availability{font-size:11px;letter-spacing:.55px}.hero .availability .status-dot{align-self:flex-start;margin-top:6px}@media(max-width:900px){.hero .availability{font-size:10px}}@media(max-width:640px){.hero .availability{font-size:10px;line-height:1.8;letter-spacing:.55px}.brand-wordmark strong{font-size:12px}}@media(max-width:370px){.hero .availability{font-size:9px}.brand-wordmark strong{font-size:11px}}
 @media(min-width:641px) and (max-width:800px){.hero-description{font-size:14px}.hero-statement{font-size:20px}.hero-statement>span{font-size:16px}.hero-buttons .button{font-size:11px}.hero-role{font-size:11px}}
+
+/* Display the transparent profile portrait against pure black in both themes. */
+.portrait-card,.brand-avatar{background:#000}
+.portrait-overlay{background:linear-gradient(180deg,transparent 35%,transparent 50%,#000a 85%,#000e 100%)}
