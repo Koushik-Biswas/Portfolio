@@ -87,3 +87,8 @@ The original uploaded CV PDF is not included in this repository. The web r√©sum√
 
 GitHub Actions passed the source checks and static build. Phone and tablet layouts were checked for overflow, and the mobile menu and both themes were checked in the browser. Vercel reported the production deployment READY, and the public production URL returned HTTP 200 and displayed the portfolio without a sign-in prompt. Real email delivery has not been verified; the owner must activate FormSubmit after the first submission.
 
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+Copyright (c) 2026 Koushik Biswas.
