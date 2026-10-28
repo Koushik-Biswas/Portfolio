@@ -4,12 +4,14 @@
 
 ![Portfolio preview](docs/portfolio-preview.jpg)
 
-A responsive navy-and-white professional portfolio based on the supplied CV, with light and dark modes, selected projects, experience, education, a printable web résumé, and an email contact form.
+A modern portrait-led professional portfolio based on the supplied CV, with a navy-and-white palette, light and dark themes, selected projects, experience, education, a printable web résumé, and an email contact form.
 
 ## Features
 
 - Responsive layouts for phones, tablets, and desktop.
 - Dark/light theme with a saved preference and system-theme support.
+- The supplied portrait appears in the header, hero, and footer; the WebP asset is optimized for web delivery.
+- Formal uppercase availability text, larger typography, and refined layouts.
 - Accessible mobile navigation, keyboard focus, and reduced-motion support.
 - Signal Studio, Agentic RAG, GoCart, and Quick Chat project showcases.
 - Click-to-email Gmail address and click-to-call phone number.
@@ -76,10 +78,12 @@ The visitor's email is included as Reply-To. The form keeps the visitor's text w
 - `app.js`: theme controls, navigation, and contact form.
 - `resume.html`: CV-derived printable web résumé.
 - `resume.js`: print action.
-- `assets/favicon.svg`: monogram.
+- `assets/koushik-biswas.webp`: supplied profile photograph, optimized as WebP.
+- `assets/favicon.svg`: browser icon.
 
 The original uploaded CV PDF is not included in this repository. The web résumé contains the CV information and can be printed or saved as PDF by the visitor.
 
 ## Verification record
 
 GitHub Actions passed the source checks and static build. Phone and tablet layouts were checked for overflow, and the mobile menu and both themes were checked in the browser. Vercel reported the production deployment READY, and the public production URL returned HTTP 200 and displayed the portfolio without a sign-in prompt. Real email delivery has not been verified; the owner must activate FormSubmit after the first submission.
+

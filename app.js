@@ -45,7 +45,7 @@
   document.addEventListener('click', event => {
     if (document.body.classList.contains('menu-open') && !event.target.closest('.site-header')) closeMenu();
   });
-  window.matchMedia('(min-width: 641px)').addEventListener('change', event => { if (event.matches) closeMenu(); });
+  window.matchMedia('(min-width: 801px)').addEventListener('change', event => { if (event.matches) closeMenu(); });
   if ('IntersectionObserver' in window) {
     const navLinks = [...nav.querySelectorAll('a')];
     const sectionObserver = new IntersectionObserver(entries => {
@@ -106,7 +106,7 @@
         status.textContent = 'Your message was received by the form service. Email delivery is awaiting inbox activation. You can also contact me directly at koushikbiswas2423@gmail.com.';
       } else {
         status.className = 'form-status success';
-        status.textContent = 'Thanks! Your message has been submitted. I look forward to connecting with you.';
+        status.textContent = 'Thank you. Your enquiry has been submitted. I look forward to connecting with you.';
       }
       form.reset();
     } catch (error) {
