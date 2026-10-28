@@ -2,6 +2,8 @@
 
 **Live website:** https://koushik-biswas-portfolio.vercel.app/
 
+![Portfolio preview](docs/portfolio-preview.jpg)
+
 A responsive navy-and-white professional portfolio based on the supplied CV, with light and dark modes, selected projects, experience, education, a printable web résumé, and an email contact form.
 
 ## Features
